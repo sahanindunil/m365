@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M365: From Foundation to Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .slide {
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            padding: 2rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .ms-900-accent { color: #00a4ef; }
+        .ms-102-accent { color: #f25022; }
+        
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00a4ef, #7fba00, #f25022, #ffb900);
+            transition: width 0.3s ease;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Intro -->
+    <div id="slide-1" class="slide active">
+        <h2 class="text-xl font-bold mb-4 opacity-70 uppercase tracking-widest">Microsoft 365 Lecture</h2>
+        <h1 class="text-6xl md:text-8xl font-extrabold text-center mb-8">
+            Foundation <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">to Mastery</span>
+        </h1>
+        <div class="flex flex-col md:flex-row gap-8 items-center mt-4">
+            <div class="glass-card p-6 text-center w-64 border-l-4 border-blue-500">
+                <p class="text-3xl font-bold ms-900-accent">MS-900</p>
+                <p class="text-sm opacity-80 mt-2">Fundamentals</p>
+            </div>
+            <div class="text-4xl opacity-30 hidden md:block"><i class="fas fa-chevron-right"></i></div>
+            <div class="glass-card p-6 text-center w-64 border-l-4 border-orange-500">
+                <p class="text-3xl font-bold ms-102-accent">MS-102</p>
+                <p class="text-sm opacity-80 mt-2">Administrator Expert</p>
+            </div>
+        </div>
+        <p class="mt-12 opacity-50 italic">Use Arrow Keys to Navigate</p>
+    </div>
+
+    <!-- Slide 2: The Core Ecosystem (MS-900) -->
+    <div id="slide-2" class="slide">
+        <h2 class="text-2xl font-bold ms-900-accent mb-6"><i class="fas fa-cloud"></i> MS-900: Understanding the Ecosystem</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+            <div class="glass-card p-6">
+                <i class="fas fa-envelope-open-text text-3xl mb-4 text-blue-400"></i>
+                <h3 class="font-bold mb-2">Exchange & Outlook</h3>
+                <p class="text-sm opacity-70">The backbone of enterprise communication and calendaring.</p>
+            </div>
+            <div class="glass-card p-6">
+                <i class="fas fa-users text-3xl mb-4 text-purple-400"></i>
+                <h3 class="font-bold mb-2">Microsoft Teams</h3>
+                <p class="text-sm opacity-70">The "Hub for Teamwork" - combining chat, meetings, and apps.</p>
+            </div>
+            <div class="glass-card p-6">
+                <i class="fas fa-share-alt text-3xl mb-4 text-cyan-400"></i>
+                <h3 class="font-bold mb-2">SharePoint & OneDrive</h3>
+                <p class="text-sm opacity-70">Intranets and personal cloud storage for content collaboration.</p>
+            </div>
+            <div class="glass-card p-6">
+                <i class="fas fa-robot text-3xl mb-4 text-emerald-400"></i>
+                <h3 class="font-bold mb-2">M365 Copilot</h3>
+                <p class="text-sm opacity-70 font-semibold">New Objective: AI-powered productivity across all apps.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Cloud & Licensing (MS-900) -->
+    <div id="slide-3" class="slide">
+        <h2 class="text-2xl font-bold ms-900-accent mb-8">Cloud Service Models</h2>
+        <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl">
+            <div class="flex-1 glass-card p-8 border-t-4 border-blue-500">
+                <h3 class="text-xl font-bold mb-4">SaaS (M365)</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Software as a Service</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Zero server maintenance</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Subscription-based usage</li>
+                </ul>
+            </div>
+            <div class="flex-1 glass-card p-8 border-t-4 border-gray-500 opacity-60">
+                <h3 class="text-xl font-bold mb-4">PaaS / IaaS</h3>
+                <p class="text-sm leading-relaxed">Infrastructure (VMs) and Platforms (DBs) where you manage more but own less hardware. <i>(Contrast this with SaaS to explain M365 value).</i></p>
+            </div>
+        </div>
+        <div class="mt-8 p-4 glass-card border-l-4 border-yellow-500 max-w-4xl">
+            <p class="text-sm"><i class="fas fa-lightbulb mr-2 text-yellow-500"></i> <strong>Exam Tip:</strong> Know the difference between <strong>M365 Business</strong> (Small/Medium) and <strong>Enterprise E3/E5</strong> (Corporate scale).</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: Transition to Expert (MS-102) -->
+    <div id="slide-4" class="slide">
+        <div class="text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Shifting to <span class="ms-102-accent uppercase">The Administrator</span></h2>
+            <p class="text-xl opacity-70 max-w-2xl mx-auto">MS-102 isn't about knowing what the tools are. It's about knowing how to <strong>deploy, secure, and govern</strong> them.</p>
+            <div class="mt-12 flex justify-center space-x-4">
+                <div class="h-1 w-12 bg-blue-500 rounded"></div>
+                <div class="h-1 w-12 bg-green-500 rounded"></div>
+                <div class="h-1 w-12 bg-orange-500 rounded"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Identity - The New Perimeter (MS-102) -->
+    <div id="slide-5" class="slide">
+        <h2 class="text-2xl font-bold ms-102-accent mb-6"><i class="fas fa-fingerprint"></i> MS-102: Identity & Access</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+            <div class="glass-card p-6">
+                <h3 class="text-lg font-bold mb-4 border-b border-white/10 pb-2">Entra ID (Azure AD)</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start"><i class="fas fa-sync mt-1 mr-3 text-blue-400"></i> <span><strong>Hybrid Sync:</strong> Using Entra Connect to bridge On-Prem and Cloud.</span></li>
+                    <li class="flex items-start"><i class="fas fa-shield-alt mt-1 mr-3 text-green-400"></i> <span><strong>Conditional Access:</strong> The "If-Then" logic (e.g., If user is in Paris, Then require MFA).</span></li>
+                </ul>
+            </div>
+            <div class="glass-card p-6">
+                <h3 class="text-lg font-bold mb-4 border-b border-white/10 pb-2">Governance</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start"><i class="fas fa-user-shield mt-1 mr-3 text-red-400"></i> <span><strong>PIM (Privileged Identity Management):</strong> Just-in-time access for Admins. No permanent "Global Admins".</span></li>
+                    <li class="flex items-start"><i class="fas fa-key mt-1 mr-3 text-yellow-400"></i> <span><strong>SSPR:</strong> Self-Service Password Reset implementation.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Security Operations (MS-102) -->
+    <div id="slide-6" class="slide">
+        <h2 class="text-2xl font-bold ms-102-accent mb-6"><i class="fas fa-user-ninja"></i> MS-102: Defender & Protection</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
+            <div class="glass-card p-6 border-b-4 border-red-500">
+                <h3 class="font-bold mb-2">Defender for Office 365</h3>
+                <p class="text-xs opacity-70">Safe Links, Safe Attachments, and Anti-Phishing policies.</p>
+            </div>
+            <div class="glass-card p-6 border-b-4 border-blue-500">
+                <h3 class="font-bold mb-2">Defender for Endpoint</h3>
+                <p class="text-xs opacity-70">Onboarding Windows/iOS/Android devices to monitor for malware.</p>
+            </div>
+            <div class="glass-card p-6 border-b-4 border-emerald-500">
+                <h3 class="font-bold mb-2">Defender for Cloud Apps</h3>
+                <p class="text-xs opacity-70">Shadow IT discovery - finding what apps your users are using without permission.</p>
+            </div>
+        </div>
+        <div class="mt-8 text-center glass-card p-6 w-full max-w-2xl bg-orange-900/20">
+            <p class="text-lg font-bold">Microsoft Secure Score</p>
+            <p class="text-sm opacity-80">The primary metric for measuring an organization's security posture. Admins must improve this score.</p>
+        </div>
+    </div>
+
+    <!-- Slide 7: Compliance & Governance (MS-102) -->
+    <div id="slide-7" class="slide">
+        <h2 class="text-2xl font-bold ms-102-accent mb-6"><i class="fas fa-gavel"></i> Microsoft Purview</h2>
+        <div class="space-y-4 w-full max-w-4xl">
+            <div class="glass-card p-4 flex items-center">
+                <div class="bg-blue-500/20 p-3 rounded-lg mr-4"><i class="fas fa-tag text-blue-400"></i></div>
+                <div>
+                    <h4 class="font-bold">Sensitivity Labels</h4>
+                    <p class="text-xs opacity-70 italic">"Classifying data as Public, Internal, or Highly Confidential."</p>
+                </div>
+            </div>
+            <div class="glass-card p-4 flex items-center">
+                <div class="bg-red-500/20 p-3 rounded-lg mr-4"><i class="fas fa-ban text-red-400"></i></div>
+                <div>
+                    <h4 class="font-bold">Data Loss Prevention (DLP)</h4>
+                    <p class="text-xs opacity-70 italic">"Stopping credit card numbers from being emailed outside the company."</p>
+                </div>
+            </div>
+            <div class="glass-card p-4 flex items-center">
+                <div class="bg-green-500/20 p-3 rounded-lg mr-4"><i class="fas fa-history text-green-400"></i></div>
+                <div>
+                    <h4 class="font-bold">Retention Policies</h4>
+                    <p class="text-xs opacity-70 italic">"Ensuring data is kept for 7 years for legal reasons or deleted for privacy."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Summary -->
+    <div id="slide-8" class="slide">
+        <h2 class="text-3xl font-bold mb-10">The Certification Path</h2>
+        <div class="relative w-full max-w-2xl">
+            <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-white/10 -translate-x-1/2"></div>
+            
+            <div class="mb-12 flex items-center justify-between w-full">
+                <div class="w-5/12 text-right">
+                    <h4 class="font-bold ms-900-accent">MS-900</h4>
+                    <p class="text-xs opacity-70">The Knowledge Seeker</p>
+                </div>
+                <div class="z-10 bg-blue-500 w-4 h-4 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.8)]"></div>
+                <div class="w-5/12 text-left text-xs opacity-60">Focus: Productivity, AI, Pricing.</div>
+            </div>
+
+            <div class="mb-12 flex items-center justify-between w-full">
+                <div class="w-5/12 text-right text-xs opacity-60">Focus: Teams, Messaging, or Security.</div>
+                <div class="z-10 bg-green-500 w-4 h-4 rounded-full"></div>
+                <div class="w-5/12 text-left">
+                    <h4 class="font-bold text-green-500">Associate Level</h4>
+                    <p class="text-xs opacity-70">The Practitioner</p>
+                </div>
+            </div>
+
+            <div class="mb-12 flex items-center justify-between w-full">
+                <div class="w-5/12 text-right">
+                    <h4 class="font-bold ms-102-accent">MS-102</h4>
+                    <p class="text-xs opacity-70">The Master / Expert</p>
+                </div>
+                <div class="z-10 bg-orange-500 w-4 h-4 rounded-full shadow-[0_0_15px_rgba(242,80,34,0.8)]"></div>
+                <div class="w-5/12 text-left text-xs opacity-60">Focus: Identity, Defender, Purview.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="fixed bottom-8 right-8 flex gap-4 z-50">
+        <div class="nav-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></div>
+        <div class="nav-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></div>
+    </div>
+
+    <div id="progress" class="progress-bar" style="width: 12.5%;"></div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        function updateSlide() {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById(`slide-${currentSlide}`).classList.add('active');
+            
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress').style.width = `${progress}%`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Add swipe support for touch devices
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            if (touchendX < touchstartX - 50) nextSlide();
+            if (touchendX > touchstartX + 50) prevSlide();
+        });
+    </script>
+</body>
+</html>
